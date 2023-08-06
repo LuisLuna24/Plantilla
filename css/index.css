@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:url("../img/Fondo.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+section{
+    width: 90%;
+    height: 90%;
+    padding: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    place-content: center;
+    background-color: #2f2f2f5b;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.Bienvenido{
+    width: 100%;
+    text-align: center;
+    color: #f6f6f6;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Bienvenido h2{
+    font-size: 1em;
+}
+
+.Login{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Login_Titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.8em;
+    color: #f6f6f6;
+}
+
+
+
+.Login_Boton{
+    width:100%;
+    height: 35px;
+    background: transparent;
+    border-radius: 25px;
+    background-color: #f6f6f6;
+    color: #2f2f2f;
+    transition: .5s;
+    border: none;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.Login_Boton:hover{
+    background-color: transparent;
+    color: #f6f6f6;
+    border: solid 2px #f6f6f6;
+}
+
+.Login_Error{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+.Login_Campo .Login_Doc{
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #f6f6f6;
+    color: #f6f6f6;
+    background-color: transparent;
+    width:100%;
+}
+
+.Login_Campo label{
+    color: #f6f6f6;
+    font-weight: 500;
+    font-size: 1.1em;
+    position: absolute;
+    transition: .3s;
+    left: 50%;
+    z-index: -1;
+    font-family: Arial, Helvetica, sans-serif;
+}.Login_Doc:focus
+.Login_Doc:valid{
+    border-bottom:2px solid #fc8600 ;
+}
+.Login_Doc:focus ~ label,.Login_Doc:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #fc8600;
+}
+
+.Login_Campo{
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 700px){
+    section{
+        gap: 50px;
+    }
+
+    .Login_Campo label{
+        left: 21%;
+    }.Login_Doc:focus
+}
