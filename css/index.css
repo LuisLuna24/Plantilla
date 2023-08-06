@@ -8,7 +8,7 @@ body{
     position: relative;
     width: 100%;
     height: 100vh;
-    background:url("/img/Fondo.jpg") no-repeat;
+    background:url("../img/Fondo.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -66,7 +66,7 @@ section{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 
 .Login_Titulo{
@@ -76,20 +76,7 @@ section{
     color: #f6f6f6;
 }
 
-.Login_Doc{
-    width:100%;
-    height: 35px;
-    background: transparent;
-    border-radius: 25px;
-    padding-left: 10px;
-    color: #f6f6f6;
-    border: solid 2px #f6f6f6;
-}
 
-
-.Login_Doc::placeholder{
-    color: #f6f6f6;
-}
 
 .Login_Boton{
     width:100%;
@@ -115,8 +102,48 @@ section{
     color: red;
 }
 
-@media (max-width: 769px){
+.Login_Campo .Login_Doc{
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #f6f6f6;
+    color: #f6f6f6;
+    background-color: transparent;
+    width:100%;
+}
+
+.Login_Campo label{
+    color: #f6f6f6;
+    font-weight: 500;
+    font-size: 1.1em;
+    position: absolute;
+    transition: .3s;
+    left: 50%;
+    z-index: -1;
+    font-family: Arial, Helvetica, sans-serif;
+}.Login_Doc:focus
+.Login_Doc:valid{
+    border-bottom:2px solid #fc8600 ;
+}
+.Login_Doc:focus ~ label,.Login_Doc:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #fc8600;
+}
+
+.Login_Campo{
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 700px){
     section{
         gap: 50px;
     }
+
+    .Login_Campo label{
+        left: 21%;
+    }.Login_Doc:focus
 }

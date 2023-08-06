@@ -21,12 +21,18 @@
             <h1>Bienvenido</h1>
             <h2>Iniciar Seción</h2>
         </div>
-        <form class="Login">
+        <form class="Login" method="post" action="php/Validar.php">
             <h2 class="Login_Titulo">Login</h2>
-            <input class="Login_Doc" type="email" placeholder="Email">
-            <input class="Login_Doc" type="password" placeholder="Contraseña">
+            <div class="Login_Campo">
+                <input class="Login_Doc" type="email" required name="correo">
+                <label for="text">Email</label>
+            </div>
+            <div class="Login_Campo">
+                <input class="Login_Doc" type="password" required name="contraseña">
+                <label for="text">Contraseña</label>
+            </div>
             <!--<h5 class="Login_Error">Correo o contraseña invalidos</h5>-->
-            <input class="Login_Boton" type="button" value="Login">
+            <input class="Login_Boton" type="submit" value="Login">
         </form>
     </section>
 </body>
