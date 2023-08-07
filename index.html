@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/Sibolos.js" defer></script>
 </head>
 <body>
     <!--=================================================================================
@@ -24,11 +25,11 @@
         <form class="Login" method="post" action="php/Validar.php">
             <h2 class="Login_Titulo">Login</h2>
             <div class="Login_Campo">
-                <input class="Login_Doc" type="email" required name="correo">
+                <input class="Login_Doc" type="email" required name="correo" id="correo">
                 <label for="text">Email</label>
             </div>
             <div class="Login_Campo">
-                <input class="Login_Doc" type="password" required name="contraseña">
+                <input class="Login_Doc" type="password" required name="contraseña" id="contraseña">
                 <label for="text">Contraseña</label>
             </div>
             <!--<h5 class="Login_Error">Correo o contraseña invalidos</h5>-->
