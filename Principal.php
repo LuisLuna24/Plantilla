@@ -14,6 +14,9 @@ if(!isset($correo)){
     <link rel="stylesheet" href="css/principal.css">
 </head>
 <body>
+    <!--=================================================================================
+        Cabezera
+    ==================================================================================-->
     <header class="header">
         <a href="#" class="logo">AN</a>
         <input type="checkbox" id="side_menu" class="side_menu">
@@ -27,6 +30,16 @@ if(!isset($correo)){
             </ul>
         </nav>
     </header>
+    <!--=================================================================================
+        Primera parte
+    ==================================================================================-->
+    <section class="Opciones">
+        <div class="Opciones_Cont">
+            <div class="Opciones_Cont_Card"></div>
+            <div class="Opciones_Cont_Card"></div>
+            <div class="Opciones_Cont_Card"></div>
+        </div>
+    </section>
 </body>
 </html>
 
