@@ -6,6 +6,10 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/Sibolos.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 <body>
     <!--=================================================================================
@@ -22,7 +26,7 @@
             <h1>Bienvenido</h1>
             <h2>Iniciar Seción</h2>
         </div>
-        <form class="Login" method="post" action="php/Validar.php">
+        <form class="Login" method="post" id="Formulario">
             <h2 class="Login_Titulo">Login</h2>
             <div class="Login_Campo">
                 <input class="Login_Doc" type="email" required name="correo" id="correo">
@@ -33,8 +37,11 @@
                 <label for="text">Contraseña</label>
             </div>
             <!--<h5 class="Login_Error">Correo o contraseña invalidos</h5>-->
-            <input class="Login_Boton" type="submit" value="Login">
+            <input class="Login_Boton" type="submit" value="Login" id="enviar">
         </form>
     </section>
+    <div id="resultado"></div>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="js/Formulario.js"></script>
 </body>
 </html>
