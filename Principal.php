@@ -35,15 +35,15 @@ if(!isset($correo)){
     ==================================================================================-->
     <section class="Opciones">
         <div class="Opciones_Cont">
-            <div class="Opciones_Cont_Card">
-
-            </div>
-            <div class="Opciones_Cont_Card">
-
-            </div>
-            <div class="Opciones_Cont_Card">
-                
-            </div>
+            <a class="Opciones_Cont_Card" href="Venta.php">
+                <h2>Ventas</h2>
+            </a>
+            <a class="Opciones_Cont_Card" href="Inventario.php">
+                <h2>Inventario</h2>
+            </a>
+            <a class="Opciones_Cont_Card" href="Empleados.php">
+                <h2>Empleados</h2>
+            </a>
         </div>
     </section>
 </body>
