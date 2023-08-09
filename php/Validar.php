@@ -65,7 +65,7 @@ function limpiar_contraseña($Contraseña){
     return $Contraseña;
 }
 
-$query = "SELECT COUNT(*) as contar FROM empleados WHERE Correo= '$correo' and Contrasña ='$Contraseña'";
+$query = "SELECT COUNT(*) as contar FROM empleados WHERE Correo= '$correo' and Contraseña ='$Contraseña'";
 $resultado=mysqli_query($conexion,$query);
 $array = mysqli_fetch_array($resultado);
 

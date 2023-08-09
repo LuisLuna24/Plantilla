@@ -35,14 +35,20 @@ if(!isset($correo)){
     ==================================================================================-->
     <section class="Opciones">
         <div class="Opciones_Cont">
-            <a class="Opciones_Cont_Card" href="Venta.php">
-                <h2>Ventas</h2>
+            <a class="Opciones_Cont_Card " href="Venta.php">
+                <div clasS="Ventas">
+                    <h2 class="Ventas_Titulo">Ventas</h2>
+                </div>
             </a>
             <a class="Opciones_Cont_Card" href="Inventario.php">
-                <h2>Inventario</h2>
+                <div clasS="Inventario">
+                    <h2 class="Ventas_Titulo">Inventario</h2>
+                </div>
             </a>
             <a class="Opciones_Cont_Card" href="Empleados.php">
-                <h2>Empleados</h2>
+                <div clasS="Empleados">
+                    <h2 class="Ventas_Titulo">Empleados</h2>
+                </div>
             </a>
         </div>
     </section>
