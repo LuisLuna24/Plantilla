@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background:url("../img/Fondo.jpg") no-repeat;
+    background-size: cover;
+}
+
+/*======================================================================================
+        Parte 1
+======================================================================================*/
+
+.Ventas{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+
+
+.Ventas_Busqueda{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #2f2f2f;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.input-group {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+   }
+   
+   .input {
+    width: 400px;
+    border: solid 1.5px #f6f6f6;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #f6f6f6;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .user-label {
+    position: absolute;
+    left: 15px;
+    color: #e8e8e8;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .input:focus, input:valid {
+    outline: none;
+    border: 1.5px solid #f78400;
+   }
+   
+   .input:focus ~ label, input:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #2f2f2f;
+    padding: 0 .2em;
+    color: #f78400;
+   }
+
+.Venta_Campo{
+    width: 100%;
+}
+
+.Ventas_Boton{
+    width: 80%;
+}
+
+@media(max-width:768px){
+    .Ventas_Busqueda{
+        width: 100%;
+    }
+}

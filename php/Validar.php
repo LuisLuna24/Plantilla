@@ -73,6 +73,6 @@ if($array['contar']>0){
     $_SESSION['username']=$correo;
     header("location: ../Principal.php");
 }else{
-    header("location: ./index.html");
+    echo "Datos Invalidos";
 }
 ?>
