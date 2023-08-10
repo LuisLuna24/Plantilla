@@ -20,18 +20,24 @@ if(!isset($correo)){
     <!--=================================================================================
         Primera parte
     ==================================================================================-->
-    <section class="Ventas_Contenedor">
+    <section class="Ventas">
         <Section class="Vetas_Formularios">
             <form action="" method="post" class="Ventas_Busqueda">
-                <div class="Venta_Campo">
-                    <input class="Venta_Doc" type="text" required name="contraseña" id="contraseña">
-                    <label for="text">Contraseña</label>
+                <div class="input-group">
+                    <input required="" type="text" name="text" autocomplete="off" class="input">
+                    <label class="user-label">First Name</label>
                 </div>
-                
-                <input type="submit" value="">
+                <input type="submit" value="Buscar" class="Ventas_Boton">
             </form>
         </Section>
     </section>
+
+    <!--=================================================================================
+        Segunda parte
+    ==================================================================================-->
+    <Section class="Tabla">
+        
+    </Section>
 
 
 </body>
