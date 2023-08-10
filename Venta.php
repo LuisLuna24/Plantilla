@@ -27,7 +27,7 @@ if(!isset($correo)){
                 <form action="" method="post" class="Ventas_Busqueda">
                     <div class="input-group">
                         <input required="" type="text" name="text" autocomplete="off" class="input">
-                        <label class="user-label">First Name</label>
+                        <label for="campo" class="user-label">First Name</label>
                     </div>
                     <input type="submit" value="Buscar" class="Ventas_Boton">
                 </form>
@@ -46,24 +46,39 @@ if(!isset($correo)){
                         <th>Stock</th>
                     </tr>
                     <?php
-                        $resultado=mysqli_query($conexion,"SELECT * FROM Producto");
+                        $resultado=mysqli_query($conexion,"SELECT * FROM productos");
                     ?>
                 </table>
-                <table class="Tabla_Productos">
-                    <?php while($datos=mysqli_fetch_array($resultado)){?>
-                        <tr class="Tabla_Productos_Datos">
-                            <th class="Productos_Datos"><?php echo $datos['Nombre'] ?></th>
-                            <th class="Productos_Datos"><?php echo $datos['Precio'] ?></th>
-                            <th class="Productos_Datos"><?php echo $datos['Existencia'] ?></th>
-                        </tr>
-                    <?php } ?>
+                <br>
+                <tbody id="content">
 
-                </table>
+                </tbody>
             </div>
             
         </Section>
 
     </section>
+
+    <script>
+
+        getData()
+
+        function getData(){
+            let input = document.getElementById("text").value
+            let content = document.getElementById("content")
+            let url="php/load.php"
+            let formaData = new FormData()
+            formaData.append('campo',input)
+            fetch(url,{
+                method: "POST",
+                body: formaData
+            }).then(response => response.json())
+            .then(data => {
+                content.innerHTML = data
+            }).catch(err => console.log(err))
+        }
+
+    </script>
 </body>
 </html>
 
