@@ -12,6 +12,7 @@ if(!isset($correo)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventas</title>
     <link rel="stylesheet" href="css/Venta.css">
+    <?php $conexion= mysqli_connect("localhost","root","","plantilla");?>
 </head>
 <body>
     <header class="header">
@@ -44,11 +45,18 @@ if(!isset($correo)){
                         <th>Precio</th>
                         <th>Stock</th>
                     </tr>
-                    <tr class="Tabla_Productos_Datos">
-                        <th>Hola</th>
-                        <th>14.5</th>
-                        <th>5</th>
-                    </tr>
+                    <?php
+                        $resultado=mysqli_query($conexion,"SELECT * FROM Producto");
+                    ?>
+                </table>
+                <table class="Tabla_Productos">
+                    <?php while($datos=mysqli_fetch_array($resultado)){?>
+                        <tr class="Tabla_Productos_Datos">
+                            <th class="Productos_Datos"><?php echo $datos['Nombre'] ?></th>
+                            <th class="Productos_Datos"><?php echo $datos['Precio'] ?></th>
+                            <th class="Productos_Datos"><?php echo $datos['Existencia'] ?></th>
+                        </tr>
+                    <?php } ?>
 
                 </table>
             </div>
