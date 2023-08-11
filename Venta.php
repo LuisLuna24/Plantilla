@@ -45,7 +45,7 @@ if(!isset($correo)){
                         <th>Precio</th>
                         <th>Stock</th>
                     </thead>
-                    <tbody id="content">
+                    <tbody id="content" >
 
                     </tbody>
                 </table>
@@ -63,7 +63,7 @@ if(!isset($correo)){
         function getData(){
             let input = document.getElementById("campo").value
             let content = document.getElementById("content")
-            let url="/php/load.php"
+            let url="./php/load.php"
             let formaData = new FormData()
             formaData.append('campo',input)
             fetch(url,{

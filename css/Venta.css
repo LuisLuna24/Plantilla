@@ -123,15 +123,13 @@ body{
 
 .Tabla_Productos{
     width: 100%;
-
+    text-align: center;
+    
+    
 }
 
+
 .Tabla_Productos_Datos{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
 }
 
 .Productos_Datos{
