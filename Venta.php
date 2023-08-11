@@ -26,7 +26,7 @@ if(!isset($correo)){
             <Section class="Vetas_Formularios">
                 <form action="" method="post" class="Ventas_Busqueda">
                     <div class="input-group">
-                        <input required="" type="text" name="text" autocomplete="off" class="input">
+                        <input required="" type="text" name="campo" id="campo" autocomplete="off" class="input">
                         <label for="campo" class="user-label">First Name</label>
                     </div>
                     <input type="submit" value="Buscar" class="Ventas_Boton">
@@ -40,19 +40,16 @@ if(!isset($correo)){
         <Section class="Tabla">
             <div class="Tabla_Contenedor">
                 <table class="Tabla_Productos">
-                    <tr class="Tabla_Productos_Datos">
+                    <thead class="Tabla_Productos_Datos">
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Stock</th>
-                    </tr>
-                    <?php
-                        $resultado=mysqli_query($conexion,"SELECT * FROM productos");
-                    ?>
-                </table>
-                <br>
-                <tbody id="content">
+                    </thead>
+                    <tbody id="content">
 
-                </tbody>
+                    </tbody>
+                </table>
+                
             </div>
             
         </Section>
@@ -64,9 +61,9 @@ if(!isset($correo)){
         getData()
 
         function getData(){
-            let input = document.getElementById("text").value
+            let input = document.getElementById("campo").value
             let content = document.getElementById("content")
-            let url="php/load.php"
+            let url="/php/load.php"
             let formaData = new FormData()
             formaData.append('campo',input)
             fetch(url,{
@@ -79,6 +76,7 @@ if(!isset($correo)){
         }
 
     </script>
+    <script src="js/Formulario.js"></script>
 </body>
 </html>
 
