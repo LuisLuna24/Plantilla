@@ -13,6 +13,7 @@ if(!isset($correo)){
     <title>Ventas</title>
     <link rel="stylesheet" href="css/Venta.css">
     <?php $conexion= mysqli_connect("localhost","root","","plantilla");?>
+    
 </head>
 <body>
     <header class="header">
@@ -23,13 +24,20 @@ if(!isset($correo)){
             Primera parte
         ==================================================================================-->
         <section class="Ventas">
+            <div class="Col_Auto">
+                <Select name="num_registros" id="num_registros" class="from_select">
+                    <option value="2">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </Select>
+
+            </div>
             <Section class="Vetas_Formularios">
                 <form action="" method="post" class="Ventas_Busqueda">
                     <div class="input-group">
                         <input required="" type="text" name="campo" id="campo" autocomplete="off" class="input">
                         <label for="campo" class="user-label">First Name</label>
                     </div>
-                    <input type="submit" value="Buscar" class="Ventas_Boton">
                 </form>
             </Section>
         </section>
@@ -56,26 +64,6 @@ if(!isset($correo)){
 
     </section>
 
-    <script>
-
-        getData()
-
-        function getData(){
-            let input = document.getElementById("campo").value
-            let content = document.getElementById("content")
-            let url="./php/load.php"
-            let formaData = new FormData()
-            formaData.append('campo',input)
-            fetch(url,{
-                method: "POST",
-                body: formaData
-            }).then(response => response.json())
-            .then(data => {
-                content.innerHTML = data
-            }).catch(err => console.log(err))
-        }
-
-    </script>
     <script src="js/Formulario.js"></script>
 </body>
 </html>
