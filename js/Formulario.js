@@ -1,4 +1,4 @@
-let paginaActual = 2
+let paginaActual = 1
 
 getData(paginaActual)
 
@@ -11,6 +11,7 @@ document.getElementById("num_registros").addEventListener("change", function(){
 function getData(pagina){
     let input = document.getElementById("campo").value
     let num_Registros = document.getElementById("num_registros").value
+    
     let content = document.getElementById("content")
     let url="./php/load.php"
     let formaData = new FormData()

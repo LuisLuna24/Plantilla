@@ -24,7 +24,7 @@ if(!isset($correo)){
             Primera parte
         ==================================================================================-->
         <section class="Ventas">
-            <div class="Col_Auto">
+            <div class="col_Auto">
                 <Select name="num_registros" id="num_registros" class="from_select">
                     <option value="2">10</option>
                     <option value="15">15</option>

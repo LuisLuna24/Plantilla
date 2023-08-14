@@ -1,8 +1,6 @@
 <?php
 
 $conexion= mysqli_connect("localhost","root","","plantilla");
-
-
 $columns=['id_Producto', 'Nombre', 'Precio	' , 'Existencia'];
 
 $table= "producto";
@@ -27,7 +25,7 @@ if($campo != null){
 }
 
  //Limit
- $limit = isset($_POST['registros']) ? $conexion-> real_escape_string($_POST['registros']) : 10; 
+ $limit = isset($_POST['registros']) ? $conexion->real_escape_string($_POST['registros']) : 10; 
  $pagina = isset($_POST['pagina']) ? $conexion-> real_escape_string($_POST['pagina']) : 0; 
 
 
@@ -61,9 +59,9 @@ $resTotal = $conexion->query($sqlTotal);
 $row_total = $resTotal->fetch_array();
 $totalRegistro = $row_total[0];
 
-$output=[];
+$output = [];
 $output['totalRegistro'] = $totalRegistro;
-$output['totalFiltros'] = $totalfiltro;
+$output['totalfiltro'] = $totalfiltro;
 $output['data']= '';
 $output['paginacion']= '';
 
