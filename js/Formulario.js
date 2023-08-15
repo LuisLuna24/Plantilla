@@ -37,8 +37,6 @@ function getData() {
         }).then(response => response.json())
         .then(data => {
             content.innerHTML = data.data
-            document.getElementById("lbl-total").innerHTML = 'Mostrando ' + data.totalFiltro +
-                ' de ' + data.totalRegistros + ' registros'
             document.getElementById("nav-paginacion").innerHTML = data.paginacion
         }).catch(err => console.log(err))
 }

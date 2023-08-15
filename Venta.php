@@ -63,17 +63,17 @@ if(!isset($correo)){
                         </tbody>
                     </table>
 
-                    <div class="row">
+                    
                         <div class="col-6">
                             <label id="lbl-total"></label>
                         </div>
 
-                        <div class="col-6" id="nav-paginacion"></div>
+                        <div class="Paginacion_Nav" id="nav-paginacion"></div>
 
                         <input type="hidden" id="pagina" value="1">
                         <input type="hidden" id="orderCol" value="0">
                         <input type="hidden" id="orderType" value="asc">
-                    </div>
+                    
                 </div>
             </main>
 
