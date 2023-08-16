@@ -1,10 +1,4 @@
 <?php
-/*
-* Script: Cargar datos de lado del servidor con PHP y MySQL
-* Autor: Marco Robles
-* Team: Códigos de Programación
-*/
-
 
 require 'config.php';
 
@@ -94,6 +88,7 @@ if ($num_rows > 0) {
         $output['data'] .= '<td>' . $row['Nombre'] . '</td>';
         $output['data'] .= '<td>' . $row['Precio'] . '</td>';
         $output['data'] .= '<td>' . $row['Existencia'] . '</td>';
+        
     }
 } else {
     $output['data'] .= '<tr>';

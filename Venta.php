@@ -26,12 +26,15 @@ if(!isset($correo)){
             Primera parte
         ==================================================================================-->
         <section class="Ventas">
-            <section class= "Vetas_Contenedor">
-                <select name="num_registros" id="num_registros" class="form-select">
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                </select>
+            <section class= "Ventas_Contenedor">
+                <div class= "Ventas_Contenedor_Mostrar">
+                    <label>Mostrar:</label>
+                    <select name="num_registros" id="num_registros" class="form-select">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
                 <form action="" method="post" class="Ventas_Busqueda">
                     <div class="input-group">
                         <input required="" type="text" name="text" name="campo" id="campo" autocomplete="off" class="input">
@@ -39,6 +42,23 @@ if(!isset($correo)){
                     </div>
                 </form>
             </section>
+
+
+            <Section class="Carrito">
+                <div class="Carrito_Contenedor">
+                    <Table>
+                        <thead>
+                            <th class="sort asc">Nombre</th>
+                            <th class="sort asc">Precio</th>
+                            <th class="sort asc">Cantidad</th>
+                        </thead>
+                    </Table>
+
+                    <h3>Total: </h3>
+                    <button class="Carrito_Boton">Realizar Compra</button>
+                </div>
+            </Section>
+
         </Section>
     
 
@@ -73,14 +93,18 @@ if(!isset($correo)){
                         <input type="hidden" id="pagina" value="1">
                         <input type="hidden" id="orderCol" value="0">
                         <input type="hidden" id="orderType" value="asc">
+                        
                     
                 </div>
             </main>
 
         </section>
+        
     </section>
 
     <script src="js/Formulario.js"></script>
+    <script src="js/Carrito.js"></script>
+    
 </body>
 
 </html>
