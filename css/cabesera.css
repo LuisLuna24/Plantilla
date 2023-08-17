@@ -12,6 +12,7 @@ header{
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    z-index: 99;
 }
 
 
@@ -32,6 +33,7 @@ header{
     max-height: 0;
     transition: max-height .5s ease-out;
 }
+
 
 .menu a{
     display: block;
@@ -113,6 +115,9 @@ header{
         float: left;
     }
 
+    .menu a {
+        height: 30px;
+    }
     .menu a:hover{
         background-color: transparent;
         color: #f78400;
