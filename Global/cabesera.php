@@ -8,9 +8,9 @@
         <label for="side_menu" class="hamb"><span class="hamb_line"></span></label>
         <nav class="nav">
             <ul class="menu">
-                <li><a href="#">Inventario</a></li>
-                <li><a href="#">Empeleados</a></li>
-                <li><a href="#">Venta</a></li>
+                <li><a href="./Inventario.php">Inventario</a></li>
+                <li><a href="./Empleados.php">Empeleados</a></li>
+                <li><a href="./Venta.php">Venta</a></li>
                 <li><a href="php/salir.php">Salir</a></li>
             </ul>
         </nav>
